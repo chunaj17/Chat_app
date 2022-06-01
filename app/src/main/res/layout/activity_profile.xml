@@ -1,0 +1,147 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".ui.profile.ProfileActivity">
+
+    <LinearLayout
+        android:id="@+id/nav_linear_layout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_margin="3sp"
+        android:orientation="horizontal"
+        android:padding="2sp"
+        app:layout_constraintBottom_toTopOf="@+id/card_view_profile"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <ImageButton
+            android:id="@+id/image_back_btn"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="5sp"
+            android:background="@null"
+            android:contentDescription="@string/back_button"
+            android:paddingStart="5sp"
+            android:paddingTop="5sp"
+            android:paddingEnd="5sp"
+            android:paddingBottom="5sp"
+            android:src="@drawable/ic_arrow_back" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:paddingTop="7sp"
+            android:paddingBottom="7sp"
+            android:text="@string/profile" />
+
+        <RelativeLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content">
+
+            <de.hdodenhof.circleimageview.CircleImageView
+                android:id="@+id/nav_profile_image"
+                android:layout_width="50sp"
+                android:layout_height="50sp"
+                android:layout_alignParentEnd="true"
+                android:layout_gravity="end"
+                android:layout_marginStart="230sp"
+                android:background="@null"
+                android:contentDescription="@string/back_button"
+                android:paddingStart="5sp"
+                android:paddingTop="5sp"
+                android:paddingEnd="5sp"
+                android:paddingBottom="5sp"
+                android:src="@drawable/ic_baseline_person_outline_24"
+                app:civ_border_color="@color/colorBlue"
+                app:civ_border_width="2sp" />
+        </RelativeLayout>
+    </LinearLayout>
+
+    <com.google.android.material.progressindicator.LinearProgressIndicator
+        android:id="@+id/loading"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="10sp"
+        android:layout_marginBottom="10sp"
+        android:contentDescription="@string/login_progress"
+        android:indeterminate="true"
+        android:visibility="gone"
+        app:indicatorColor="@color/progress_color"
+        app:layout_constraintBottom_toTopOf="@id/card_view_profile"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/nav_linear_layout" />
+
+    <androidx.cardview.widget.CardView
+        android:id="@+id/card_view_profile"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_margin="10sp"
+        android:padding="50sp"
+        app:cardCornerRadius="@dimen/text_size_20sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/nav_linear_layout">
+
+        <LinearLayout
+            android:id="@+id/linearLayout"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="center"
+            android:orientation="vertical">
+
+            <de.hdodenhof.circleimageview.CircleImageView
+                android:id="@+id/profile_image"
+                android:layout_width="96dp"
+                android:layout_height="96dp"
+                app:civ_border_color="#03A9F4"
+                android:src="@mipmap/ic_launcher"
+                app:civ_border_width="4dp"
+                app:layout_constraintBottom_toBottomOf="@+id/photo_selector"
+                app:layout_constraintEnd_toEndOf="@+id/photo_selector"
+                app:layout_constraintStart_toStartOf="@+id/photo_selector"
+                app:layout_constraintTop_toTopOf="@+id/photo_selector" />
+
+            <EditText
+                android:id="@+id/username"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="5sp"
+                android:autofillHints="name"
+                android:background="@color/white"
+                android:fontFamily="@font/marko_one"
+                android:gravity="center"
+                android:hint="@string/username"
+                android:inputType="textPersonName"
+                android:textSize="16sp" />
+
+            <Button
+                android:id="@+id/saveButton"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="@dimen/start_margin_ten_dp"
+                android:layout_marginEnd="@dimen/end_margin_ten_dp"
+                android:layout_marginBottom="@dimen/margin_5dp"
+                android:backgroundTint="#2196F3"
+                android:fontFamily="@font/adamina"
+                android:padding="@dimen/padding_15dp"
+                android:text="@string/save"
+                android:textColor="@color/white"
+                android:visibility="gone"
+                app:layout_constraintBottom_toTopOf="@+id/or_text"
+                app:layout_constraintEnd_toEndOf="@id/signup_btn"
+                app:layout_constraintStart_toStartOf="@id/signup_btn" />
+
+            <Button
+                android:id="@+id/logout_btn"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:backgroundTint="@color/colorBlue"
+                android:text="@string/log_out" />
+        </LinearLayout>
+    </androidx.cardview.widget.CardView>
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>

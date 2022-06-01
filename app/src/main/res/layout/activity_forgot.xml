@@ -1,0 +1,107 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".ui.forgot.Forgot">
+
+    <RelativeLayout
+        android:id="@+id/relative_layout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent">
+
+
+        <LinearLayout
+            android:id="@+id/linearLayout"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_centerHorizontal="true"
+            android:layout_centerVertical="true"
+            android:gravity="center"
+            android:orientation="vertical">
+            <ImageView
+                android:id="@+id/image"
+                android:layout_width="350sp"
+                android:layout_height="300sp"
+                android:cropToPadding="true"
+                android:src="@drawable/forgot"
+                app:layout_constraintTop_toTopOf="parent"
+                app:layout_constraintStart_toStartOf="@id/relative_layout"
+                app:layout_constraintEnd_toEndOf="@id/relative_layout"
+                android:contentDescription="TODO" />
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:layout_margin="5sp"
+                android:text="@string/forgot_password"
+                android:textAlignment="center"
+                android:textSize="40sp" />
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="@dimen/padding_15dp"
+                android:layout_marginEnd="@dimen/padding_15dp"
+                android:padding="2sp"
+                android:text="@string/prompt_email"
+                android:textSize="@dimen/text_size_20sp" />
+
+            <com.google.android.material.textfield.TextInputLayout
+                android:id="@+id/email_text_layout"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="@dimen/padding_15dp"
+                android:layout_marginEnd="@dimen/padding_15dp"
+                app:errorEnabled="true"
+                app:errorIconDrawable="@drawable/ic_error">
+
+                <com.google.android.material.textfield.TextInputEditText
+                    android:id="@+id/email_text"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:hint="@string/your_email_address"
+                    android:inputType="textEmailAddress"
+                    android:selectAllOnFocus="true"
+                    android:textColorHint="#546E7A" />
+            </com.google.android.material.textfield.TextInputLayout>
+
+            <Button
+                android:id="@+id/submit"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="@dimen/padding_15dp"
+                android:layout_marginEnd="@dimen/padding_15dp"
+                android:backgroundTint="@color/colorBlue"
+                android:fontFamily="@font/marko_one"
+                android:padding="5sp"
+                android:text="@string/submit" />
+            <com.google.android.material.progressindicator.LinearProgressIndicator
+                android:id="@+id/loading"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_margin="5sp"
+                android:contentDescription="@string/login_progress"
+                android:indeterminate="true"
+                android:visibility="visible"
+                app:indicatorColor="@color/progress_color" />
+
+            <TextView
+                android:id="@+id/back_to_login_button"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="@dimen/padding_15dp"
+                android:layout_marginEnd="@dimen/padding_15dp"
+                android:fontFamily="@font/roboto_medium"
+                android:padding="2sp"
+                android:text="@string/back_to_login"
+                android:textAlignment="center"
+                android:textSize="@dimen/text_size_20sp" />
+        </LinearLayout>
+
+    </RelativeLayout>
+</ScrollView>

@@ -1,0 +1,122 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".ui.user.UserActivity">
+
+    <RelativeLayout
+        android:id="@+id/relative_layout_one"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_margin="3sp"
+        android:orientation="horizontal"
+        android:padding="2sp"
+        app:layout_constraintBottom_toTopOf="@+id/chat_list"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <ImageButton
+            android:id="@+id/image_back_btn"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentStart="true"
+            android:layout_marginStart="5sp"
+            android:background="@null"
+            android:contentDescription="@string/back_button"
+            android:paddingStart="5sp"
+            android:paddingTop="5sp"
+            android:paddingEnd="5sp"
+            android:paddingBottom="5sp"
+            android:src="@drawable/ic_arrow_back" />
+
+        <TextView
+            android:id="@+id/username"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_toStartOf="@+id/profile_image"
+            android:layout_toEndOf="@+id/image_back_btn"
+            android:paddingTop="10sp"
+            android:paddingBottom="7sp"
+            android:text="@string/messages" />
+
+
+        <de.hdodenhof.circleimageview.CircleImageView
+            android:id="@+id/profile_image"
+            android:layout_width="50sp"
+            android:layout_height="50sp"
+            android:layout_alignParentEnd="true"
+            android:layout_marginStart="220sp"
+            android:background="@null"
+            android:contentDescription="@string/back_button"
+            android:paddingStart="5sp"
+            android:paddingTop="5sp"
+            android:paddingEnd="5sp"
+            android:paddingBottom="5sp"
+            android:src="@drawable/ic_baseline_person_outline_24"
+            app:civ_border_color="@color/colorBlue"
+            app:civ_border_width="2sp" />
+    </RelativeLayout>
+
+    <com.google.android.material.progressindicator.LinearProgressIndicator
+        android:id="@+id/loading"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_margin="5sp"
+        android:contentDescription="@string/login_progress"
+        android:indeterminate="true"
+        android:visibility="visible"
+        app:indicatorColor="@color/progress_color"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/relative_layout_one"
+
+        />
+
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/chat_list"
+        android:layout_width="match_parent"
+        android:layout_height="0sp"
+        android:layout_marginTop="5sp"
+        android:padding="5sp"
+        app:layout_constraintBottom_toTopOf="@+id/linearLayout"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/relative_layout_one"
+        app:stackFromEnd="true" />
+
+
+        <LinearLayout
+            android:id="@+id/linearLayout"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:backgroundTint="@color/colorTextBackground"
+            android:orientation="horizontal"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/chat_list">
+
+            <EditText
+                android:id="@+id/write_edit_text"
+                android:layout_width="0sp"
+                android:layout_height="wrap_content"
+                android:layout_weight="0.2"
+                android:background="@null"
+                android:hint="@string/write_message"
+                android:paddingStart="@dimen/padding_15dp"
+                android:paddingTop="@dimen/padding_15dp"
+                android:paddingEnd="2sp"
+                android:paddingBottom="@dimen/padding_15dp" />
+
+            <ImageButton
+                android:id="@+id/send_btn"
+                android:layout_width="50sp"
+                android:layout_height="50sp"
+                android:backgroundTint="@color/white"
+                android:src="@drawable/ic_baseline_send_24"
+                android:visibility="gone" />
+        </LinearLayout>
+</androidx.constraintlayout.widget.ConstraintLayout>

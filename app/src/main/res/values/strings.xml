@@ -1,0 +1,47 @@
+<resources>
+    <string name="app_name">Cool Chatter</string>
+    <string name="login">Login</string>
+    <string name="signup">SignUp</string>
+    <string name="wellcome_greeting">Have fun chat with our cool chat app</string>
+    <!-- Strings related to login -->
+    <string name="prompt_email">Email</string>
+    <string name="prompt_password">Password</string>
+    <string name="action_sign_in">Sign in or register</string>
+    <string name="action_sign_in_short">Sign in</string>
+    <string name="welcome">"Welcome!"</string>
+    <string name="invalid_username">Not a valid username</string>
+    <string name="invalid_password">Password must be >5 characters</string>
+    <string name="login_failed">"Login failed"</string>
+    <string name="forgot_password"><b>Forgot password?</b></string>
+    <string name="welcome_back">Welcome Back</string>
+    <string name="or">or</string>
+    <string name="user_name">Name</string>
+    <string name="create_account">Create Account</string>
+    <string name="create">Create</string>
+    <string name="account">Account</string>
+    <string name="write_message">Write message...</string>
+    <string name="image_description">TODO</string>
+    <string name="pluse_sign">+</string>
+    <string name="confirm_password">Confirm Password</string>
+    <string name="back_button">back button</string>
+    <string name="main">Main</string>
+    <string name="massages">Massages</string>
+    <string name="profile">Profile</string>
+    <string name="save">Save</string>
+    <string name="username">username</string>
+    <string name="users">Users</string>
+    <string name="messages">Messages</string>
+    <string name="no_connection">couldn\'t connect to internet.</string>
+    <string name="check_connection">Please check your network settings.</string>
+    <string name="retry">retry</string>
+    <string name="login_progress">login progress</string>
+    <string name="submit">Submit</string>
+    <string name="your_email_address">your email address</string>
+    <string name="back_to_login">Back to Login</string>
+    <string name="log_out">Log out</string>
+    <string name="sign_in_with_google">Sign in with Google</string>
+    <string name="add_profile_picture">add profile picture</string>
+    <string name="cool">COOL</string>
+    <string name="chatter">chatter</string>
+    <string name="let_s_get_started">Let\'s get started\!\!\!</string>
+</resources>
